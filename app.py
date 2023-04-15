@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import pickle
 
-app = Flask(__name__, template_folder='Templates')
+app = Flask(__name__, template_folder='Templates', static_folder='static')
 
 model = pickle.load(open('model.pkl', 'rb'))
 
