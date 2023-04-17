@@ -1,62 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">    
+
+<html lang="en">
+  
 <link rel="stylesheet" href="/static/style.css">
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Tilt+Prism:wght@400,500,600"/>
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:wght@400,500,600,700,800"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Tilt+Prism:wght@400,500,600" />
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:wght@400,500,600,700,800" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Classifier</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Classifier</title>
+</head>
 
-  <body>
-    <div class="form-container">
-        <form action="{{ url_for('predict')}}" method="post">
-          <h1 class="head1">NEWS CLASSIFIER</h1>
-          <p>There are 4 classifications: SPORTS, CRIME, SCIENCE AND BUSINESS</p>
-          <br>
-          <label for="sentence1">Sentence 1</label>
-          <input type="text" id="sentence1" name="sentence1" placeholder="Enter sentence 1..." value="{{ request.form.get('sentence1', '') }}">
-          <label for="sentence1" class="green">{{ prediction[0] }}</label>
-          <br>
+<body>
+  <div class="form-container">
+    <form action="{{ url_for('predict')}}" method="post">
+      <h1 class="head1">NEWS CLASSIFIER</h1>
+      <p>There are 4 classifications: SPORTS, CRIME, SCIENCE AND BUSINESS</p>
+      <br>
+      <label for="sentence1">Sentence 1</label>
+      <input type="text" id="sentence1" name="sentence1" placeholder="Enter sentence 1..."
+        value="{{ request.form.get('sentence1', '') }}">
+      <label for="sentence1" class="green">{{ prediction[0] }}</label>
+      <br>
 
-          <label for="sentence2">Sentence 2</label>
-          <input type="text" id="sentence2" name="sentence2" placeholder="Enter sentence 2..." value="{{ request.form.get('sentence2', '') }}">
-          <label for="sentence2" class="green">{{ prediction[1] }}</label>
-          <br>
+      <label for="sentence2">Sentence 2</label>
+      <input type="text" id="sentence2" name="sentence2" placeholder="Enter sentence 2..."
+        value="{{ request.form.get('sentence2', '') }}">
+      <label for="sentence2" class="green">{{ prediction[1] }}</label>
+      <br>
 
-          <label for="sentence2">Sentence 3</label>
-          <input type="text" id="sentence3" name="sentence3" placeholder="Enter sentence 3..." value="{{ request.form.get('sentence3', '') }}">
-          <label for="sentence3" class="green">{{ prediction[2] }}</label>
-          <br>
+      <label for="sentence2">Sentence 3</label>
+      <input type="text" id="sentence3" name="sentence3" placeholder="Enter sentence 3..."
+        value="{{ request.form.get('sentence3', '') }}">
+      <label for="sentence3" class="green">{{ prediction[2] }}</label>
+      <br>
 
-          <label for="sentence2">Sentence 4</label>
-          <input type="text" id="sentence4" name="sentence4" placeholder="Enter sentence 4..." value="{{ request.form.get('sentence4', '') }}">
-          <label for="sentence3" class="green">{{ prediction[3] }}</label>
-          <br>
+      <label for="sentence2">Sentence 4</label>
+      <input type="text" id="sentence4" name="sentence4" placeholder="Enter sentence 4..."
+        value="{{ request.form.get('sentence4', '') }}">
+      <label for="sentence3" class="green">{{ prediction[3] }}</label>
+      <br>
 
-          <div class="center">
-            <button id="predict-button" type="submit">Submit</button>
-          </div>
-        </form>
+      <div class="center">
+        <button id="predict-button" type="submit">Submit</button>
       </div>
-      <div class="center y" style="margin-top: 100px;">
-        <h2 class="head2">ABOUT</h2>
-        <div class="cent">
-        <p class="aboutpar">News Classifier is a web app that classifies news into 4 categories: Business, Entertainment, Politics, Sports and Technology.<br> It uses a machine learning model to classify the news. The model was trained on a dataset of 40,000 news articles, the model was trained using a Naive Bayes Classifier. <br>The model was trained using the scikit-learn library in python. The model was deployed using Flask and Heroku.</p>
-        <br>
-        <img src="/static/imgs/robot.png"></div>
-
-        <blockquote>Please Note: The model is very weak, it's just for showcase purposes. The results may be innacurate.</blockquote>
-        <a class="fa fa-instagram fa-2x" href="https://www.instagram.com/teni.vk/" target="_blank"></a>
-        <a class="fa fa-twitter fa-2x" href="https://twitter.com/ozonichi" target="_blank"></a>
-        <a class="fa fa-github fa-2x"  href="https://github.com/ZeleOeO/AI-News-Classifier" target="_blank"></a>
+    </form>
+  </div>
+  <div class="center y" style="margin-top: 100px;">
+    <h2 class="head2">ABOUT</h2>
+    <div class="cent">
+      <p class="aboutpar">This is a web app that classifies news into 4 categories: Sports, Crime, Science, and Business
+        using a machine learning model trained on a dataset of 40000 news articles.
+        <br>The model was trained using the scikit-learn Python library using a naive Bayes classifier.
+        <br>The web app was deployed using Flask and Heroku.
+      </p>
+      <br>
+      <img src="/static/imgs/robot.png">
     </div>
-    
+    <blockquote>Please Note: The model is very weak, it's just for showcase purposes. The results may be inaccurate.</blockquote>
 
+    <a class="fa fa-instagram fa-2x" href="https://www.instagram.com/teni.vk/" target="_blank"></a>
+    <a class="fa fa-twitter fa-2x" href="https://twitter.com/ozonichi" target="_blank"></a>
+    <a class="fa fa-github fa-2x" href="https://github.com/ZeleOeO/AI-News-Classifier" target="_blank"></a>
+  </div>
+</body>
 
-  </body>
 </html>
