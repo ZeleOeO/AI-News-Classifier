@@ -9,3 +9,8 @@ The model was trained using the [scikit-learn](https://scikit-learn.org/) Python
 The web app was deployed using Flask and Heroku.
 
 Contributer: [@pineapplegoose](https://github.com/pineapplegoose) - Frontend design
+
+
+### Issues
+- It's not yet optimized for phone screens
+- When nothing is put into the text, the model predicts the empty line as "BUSINESS NEWS"
