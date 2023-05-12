@@ -1,16 +1,28 @@
 # AI-News-Classifier
 
-### An AI classifier for News Headlines
+## Description
 
-This is a web app that classifies news into 4 categories: Sports, Crime, Science, and Business using a machine learning model trained on a dataset of 40000 news articles.
+This is a web application that uses a machine learning model trained on a dataset of 40,000 news articles to classify news headlines into four categories: Sports, Crime, Science, and Business. The model was trained using the scikit-learn Python library with a naive Bayes classifier. The web app was built using Flask and deployed on Heroku. The frontend design was contributed by @pineapplegoose.
 
-The model was trained using the [scikit-learn](https://scikit-learn.org/) Python library using a naive Bayes classifier.
+## Usage
 
-The web app was deployed using Flask and Heroku.
+To use the application, simply enter a news headline into the text field and click the "Classify" button. The application will then predict which category the headline belongs to and display the result.
 
-Contributer: [@pineapplegoose](https://github.com/pineapplegoose) - Frontend design
+## Issues
 
+The application is currently not optimized for phone screens and may not display properly on smaller devices. Additionally, if no text is entered into the text field, the model will predict the empty line as "BUSINESS NEWS".
 
-### Issues
-- It's not yet optimized for phone screens
-- When nothing is put into the text, the model predicts the empty line as "BUSINESS NEWS"
+## Installation
+
+To run the application locally, you can follow these steps:
+
+1. Clone the repository: `git clone https://github.com/ZeleOeO/AI-News-Classifier.git`
+2. Navigate to the project directory: `cd AI-News-Classifier`
+3. Install the required Python packages: `pip install -r requirements.txt`
+4. Run the app: `python app.py`
+
+## Credits
+
+- Frontend design by @pineapplegoose
+- Machine learning model trained using scikit-learn
+- Web app built using Flask and deployed on Heroku
