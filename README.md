@@ -8,9 +8,6 @@ This is a web application that uses a machine learning model trained on a datase
 
 To use the application, simply enter a news headline into the text field and click the "Classify" button. The application will then predict which category the headline belongs to and display the result.
 
-## Issues
-
-The application is currently not optimized for phone screens and may not display properly on smaller devices. Additionally, if no text is entered into the text field, the model will predict the empty line as "BUSINESS NEWS".
 
 ## Installation
 
@@ -21,8 +18,13 @@ To run the application locally, you can follow these steps:
 3. Install the required Python packages: `pip install -r requirements.txt`
 4. Run the app: `python app.py`
 
+
+## Issues
+
+The application is currently not optimized for phone screens and may not display properly on smaller devices. Additionally, if no text is entered into the text field, the model will predict the empty line as "BUSINESS NEWS".
+
 ## Credits
 
-- Frontend design by @pineapplegoose
+- Frontend design by [@pineapplegoose](https://github.com/pineapplegoose)
 - Machine learning model trained using scikit-learn
 - Web app built using Flask and deployed on Heroku
