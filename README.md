@@ -1,5 +1,8 @@
 # AI-News-Classifier
 
+## Website
+https://network-classifier.herokuapp.com/
+
 ## Description
 
 This is a web application that uses a machine learning model trained on a dataset of 40,000 news articles to classify news headlines into four categories: Sports, Crime, Science, and Business. The model was trained using the scikit-learn Python library with a naive Bayes classifier. The web app was built using Flask and deployed on Heroku. The frontend design was contributed by @pineapplegoose.
